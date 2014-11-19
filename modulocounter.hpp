@@ -1,9 +1,9 @@
 #include "counter.hpp"
 
-class modulocounter
+class modulocounter_comp
 {
 public:
-	modulocounter(int m = 0);
+	modulocounter_comp(int m);
 
 	void reset();
 
@@ -14,4 +14,15 @@ public:
 private:
 	int modulo;
 	counter c;
+};
+
+class modulocounter_sub : public counter
+{
+public:
+	modulocounter_sub(int m);
+
+	bool increment();
+
+private:
+	int modulo;
 };

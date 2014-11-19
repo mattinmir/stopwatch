@@ -9,6 +9,7 @@ public:
 	void reset();
 
 	int& get_count();
+
 private:
 	int count;
 };
