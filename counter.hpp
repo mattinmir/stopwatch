@@ -1,3 +1,4 @@
+#include <iostream>
 
 class counter
 {
@@ -8,8 +9,12 @@ public:
 
 	void reset();
 
-	int& get_count();
+	int get_count() const;
+
+	friend std::ostream& operator<<(std::ostream& out, const counter &c);
 
 private:
 	int count;
 };
+
+std::ostream& operator<<(std::ostream& out, const counter &c);

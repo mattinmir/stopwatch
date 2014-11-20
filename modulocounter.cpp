@@ -1,6 +1,6 @@
 #include "modulocounter.hpp"
 
-modulocounter_comp::modulocounter_comp(int m = 0)
+modulocounter_comp::modulocounter_comp(int m)
 {
 	modulo = m;
 	c.reset();
@@ -11,7 +11,7 @@ void modulocounter_comp::reset()
 	c.reset();
 }
 
-int modulocounter_comp::get_count()
+int modulocounter_comp::get_count() const
 {
 	return c.get_count();
 }
@@ -29,12 +29,16 @@ bool modulocounter_comp::increment()
 	return rollover;
 }
 
+std::ostream& operator<<(std::ostream& out, const modulocounter_comp &mc)
+{
+	out << mc.get_count() << '(' << mc.modulo << ')';
+	return out;
+}
 
 
 
 
-
-modulocounter_sub::modulocounter_sub(int m = 0)
+modulocounter_sub::modulocounter_sub(int m)
 {
 	modulo = m;
 	reset();
@@ -51,4 +55,10 @@ bool modulocounter_sub::increment()
 	}
 
 	return rollover;
+}
+
+std::ostream& operator<<(std::ostream& out, const modulocounter_sub &mc)
+{
+	out << mc.get_count() << '(' << mc.modulo << ')';
+	return out;
 }
