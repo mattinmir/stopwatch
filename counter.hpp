@@ -1,3 +1,6 @@
+#ifndef "COUNTER_H"
+#define "COUNTER_H"
+
 #include <iostream>
 
 class counter
@@ -18,3 +21,5 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& out, const counter &c);
+
+#endif
