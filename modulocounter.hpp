@@ -1,3 +1,6 @@
+#ifndef "MODULOCOUNTER_HPP"
+#define "MODULOCOUNTER_HPP"
+
 #include "counter.hpp"
 
 class modulocounter_comp
@@ -30,3 +33,5 @@ public:
 private:
 	int modulo;
 };
+
+#endif
