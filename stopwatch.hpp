@@ -1,3 +1,7 @@
+#ifndef "STOPWATCH_HPP"
+#define "STOPWATCH_HPP"
+
+
 #include "modulocounter.hpp"
 class stopwatch_comp
 {
@@ -28,3 +32,5 @@ private:
 	modulocounter_sub minutes;
 	modulocounter_sub hours;
 };
+
+#endif
