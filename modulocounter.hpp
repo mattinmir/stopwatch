@@ -1,5 +1,5 @@
-#ifndef "MODULOCOUNTER_HPP"
-#define "MODULOCOUNTER_HPP"
+#ifndef MODULOCOUNTER_HPP
+#define MODULOCOUNTER_HPP
 
 #include "counter.hpp"
 
